@@ -1,0 +1,91 @@
+.time {
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+	@media (max-width: $bp__lg) {
+        flex-direction: column-reverse;
+        justify-content: center;
+	}
+    &__wrapper {
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        overflow: hidden;
+
+        @media (max-width: $bp__sm) {
+            padding-top: 50px;
+        }
+
+        .vector1 {
+            position: absolute;
+            left: -350px;
+            bottom: -150px;
+            width: 438px;
+            height: 421px;
+            background-image: url("../img/time_vector_1.png");
+            z-index: 1;
+        }
+
+        .vector2 {
+            position: absolute;
+            right: -450px;
+            bottom: -20px;
+            width: 691px;
+            height: 612px;
+            background-image: url("../img/time_vector_2.png");
+            z-index: 1;
+        }
+
+        .vector3 {
+            position: absolute;
+            right: 100px;
+            bottom: -300px;
+            width: 634px;
+            height: 602px;
+            background-image: url("../img/time_vector_3.png");
+            z-index: 2;
+        }
+    }
+
+    .img {
+        width: 569px;
+        max-width: 100%;
+        height: 378px;
+        background: url("../img/time.jpg");
+        z-index: 100;
+
+        @media (max-width: $bp__lg) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__block {
+        width: 500px;
+        max-width: 100%;
+        @media (max-width: $bp__lg) {
+            width: 100%;
+        }
+        
+        h2 {
+            position: relative;
+            width: 700px;
+            max-width: 100%;
+            text-align: left;
+            color: $secondary__color;
+            z-index: 100;
+        }
+
+        p {
+            position: relative;
+            width: 600px;
+            max-width: 100%;
+            color: #2D2E2E;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 150%;
+            margin-bottom: 50px;
+            z-index: 100;
+        }
+    }
+}

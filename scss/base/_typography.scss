@@ -1,0 +1,49 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+
+h1 {
+  font-family: 'Luckiest_Guy_cyr';
+  color: #000;
+  font-size: 54px;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+
+  @include fw(700);
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 16px;
+  color: #242C6C;
+
+  @include fw(700);
+  @media (max-width: $bp__sm) {
+    font-size: 24px;
+  }
+}
+
+
+h2+p {
+  font-size: 16px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #A0712D;
+
+  @include fw(300);
+
+  @media (max-width: $bp__xl) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $bp__md) {
+    text-align: left;
+  }
+}

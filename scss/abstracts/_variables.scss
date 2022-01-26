@@ -1,0 +1,90 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../' !default;
+
+
+
+
+// sizes
+$width__xxl: 1250px;
+$width__xl: 991px;
+$width__lg: 767px;
+$width__md: 575px;
+$width__sm: 424px;
+$width__xs: 100%;
+
+//breakpoins
+$bp__xl: 1271px;
+$bp__lg: 992px;
+$bp__md: 768px;
+$bp__sm: 576px;
+$bp__xs: 425px;
+
+// bg colors
+$header__bg: #c2ebf5;
+$header__bg_transparent: #c2ebf5e7;
+$rules__bg: #f4e76e;
+$features__bg: #7353ba;
+$buy__wrapper__bg: #fafafa;
+$buy__bg: #C2EBF566;
+$footer__bg: #3e3466;
+
+// other colors
+$primary__color: #2D393E;
+$primary__color_lighter: #4F6D7A;
+$primary__color_inverse: #FFFFFF;
+$benefits__left__text__color: #C2EBF5;
+$benefits__right__text__color: #FEFEFE;
+$secondary__color: #7A67C8;
+$secondary__color_inverse: #FAD467;
+$alert__color: #FE646F;
+$btn__buy__color: #FFD600;
+$btn__buy__color_darker: #ffbb00;
+$btn__text__color: #222222;
+$btn__text__color_inverse: #F3FCF0;

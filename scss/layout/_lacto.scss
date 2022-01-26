@@ -1,0 +1,225 @@
+.lacto {
+    display: flex;
+    justify-content: flex-end;
+
+    &__wrapper {
+        padding-top: 173px;
+        padding-bottom: 422px;
+        background: #fff;
+
+        @include image("lacto__bg.png", cover);
+
+        &_complete {
+            background: radial-gradient(48.37% 107.29% at 48.37% 37.44%, rgba(255, 198, 198, 0.2) 33.85%, rgba(242, 242, 250, 0.2) 100%), rgba(255, 245, 231, 0.65);
+        }
+    }
+
+    &__image {
+        width: 449px;
+        height: 482px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-right: 81px;
+
+        &:before {
+            content: '';
+            width: 449px;
+            height: 482px;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+
+            @include image("lacto__img_bg.svg");
+        }
+
+        &:after {
+            content: 'Биологически активная добавка к пище. Не является лекарством';
+            position: relative;
+            bottom: 10px;
+            display: block;
+            width: 192px;
+            height: 32px;
+            font-size: 12px;
+            line-height: 130%;
+            display: flex;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.5);
+
+            @include fw(400);
+        }
+
+        img {
+            position: relative;
+            z-index: 3;
+        }
+
+        .enough {
+            z-index: 2;
+            position: absolute;
+            right: 50px;
+            top: 100px;
+            width: 165px;
+            height: 136px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @include image("lacto__enough.svg");
+
+            &>p {
+                margin: 0;
+                margin-left: 35px;
+                font-size: 10px;
+                line-height: 130%;
+                color: #AD9A81;
+
+                @include fw(300);
+
+                &:nth-child(1) {
+                    margin-left: 15px;
+                }
+
+                &:nth-child(2) {
+                    display: flex;
+                    align-items: start;
+                    @include fw(700);
+                    position: relative;
+                    top: 5px;
+                }
+
+                &:nth-child(3) {
+                    margin-left: 40px;
+                    font-size: 9px;
+                }
+
+                &>span {
+                    font-size: 48px;
+                    line-height: 100%;
+                    color: #954145;
+                    position: relative;
+                    top: -5px;
+                }
+            }
+        }
+
+    }
+}
+
+.buy {
+    position: relative;
+    top: 50px;
+    max-width: 616px;
+
+    h2 {
+        font-size: 42px;
+        line-height: 130%;
+        color: #DC0D17;
+        margin-bottom: 18px;
+    }
+
+    h2+p {
+        font-size: 16px;
+        line-height: 130%;
+        color: #A0712D;
+        margin-bottom: 35px;
+        text-align: left;
+
+        @include fw(400);
+    }
+
+    &__icons {
+        display: flex;
+        margin-bottom: 20px;
+
+        .wildberries {
+            width: 212px;
+            height: 50px;
+            margin-right: 25px;
+            background: linear-gradient(180deg, #FFF2FD 0%, #FFFFFF 100%);
+            border: 0.6px solid rgba(244, 244, 244, 0.36);
+            box-sizing: border-box;
+            box-shadow: 0px 1px 5px 5px rgba(190, 17, 165, 0.04);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+                content: '';
+                position: relative;
+                display: block;
+                width: 121px;
+                height: 33px;
+
+                @include image("buy__wildberries.svg");
+            }
+        }
+
+        .ozon {
+            width: 212px;
+            height: 50px;
+            background: linear-gradient(180deg, #DDEBFF 0%, #FFFFFF 100%);
+            border: 0.6px solid rgba(244, 244, 244, 0.36);
+            box-sizing: border-box;
+            box-shadow: 0px 1px 5px 5px rgba(241, 247, 253, 0.25);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+                content: '';
+                position: relative;
+                display: block;
+                width: 87px;
+                height: 27px;
+
+                @include image("buy__ozon.svg");
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+
+
+        .use {
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 130%;
+            display: flex;
+            align-items: center;
+            font-style: italic;
+            color: rgba(12, 73, 194, 0.75);
+
+            @include fw(300);
+            @include fw(400);
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            margin-right: 89px;
+        }
+
+        .docs {
+            cursor: pointer;
+            font-size: 12px;
+            line-height: 150%;
+            color: #9297A4;
+            font-style: italic;
+
+            @include fw(400);
+            text-decoration: underline;
+            text-decoration-style: dashed;
+        }
+    }
+
+    &__useBlock {
+        &.hidden {
+            display: none;
+        }
+    }
+}

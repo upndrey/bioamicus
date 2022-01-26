@@ -1,0 +1,99 @@
+.need {
+    &__wrapper {
+        overflow: hidden;
+        padding-top: 125px;
+        padding-bottom: 191px;
+        background: #d2eeff;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h2+p {
+        max-width: 569px;
+        margin: auto;
+        margin-bottom: 103px;
+    }
+
+    .title {
+        font-size: 28px;
+        line-height: 140%;
+        color: #6F6CB9;
+        margin-bottom: 5px;
+
+        @include fw(600);
+    }
+
+    .text {
+        font-size: 16px;
+        line-height: 150%;
+        color: #4B4B4B;
+
+        @include fw(400);
+    }
+
+    &>div {
+        max-width: 1040px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &>div {
+            &:not(.image) {
+                max-width: 508px;
+            }
+
+            &.image {
+                position: relative;
+            }
+        }
+    }
+
+    &__micro {
+        .image {
+            &:before {
+                content: '';
+                width: 413px;
+                height: 311px;
+                position: absolute;
+                top: -50px;
+                z-index: 1;
+
+                @include image("need__micro_bg.svg");
+            }
+
+            img {
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+
+    &__kid {
+        .title {
+            color: #E7AF6B;
+        }
+
+        .image {
+            &:before {
+                content: '';
+                width: 363px;
+                height: 401px;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                z-index: 1;
+
+                @include image("need__kid_bg.svg");
+            }
+
+            img {
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+}
