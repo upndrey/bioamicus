@@ -148,85 +148,19 @@ $(document).ready(function(e) {
     mobileNavDom.classList.toggle("hidden");
   });
 
-  // close window
-  const CookieService = {
-    setCookie(name, value, days) {
-      let expires = '';
+  // usage
+  let useLink1Dom = document.getElementById("useLink1");
+  let use1Dom = document.getElementById("use1");
+  let useLink2Dom = document.getElementById("useLink2");
+  let use2Dom = document.getElementById("use2");
 
-      if (days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = '; expires=' + date.toUTCString();
-      }
-
-      document.cookie = name + '=' + (value || '')  + expires + ';';
-    },
-
-    getCookie(name) {
-      const cookies = document.cookie.split(';');
-
-      for (const cookie of cookies) {
-        if (cookie.indexOf(name + '=') > -1) {
-          return cookie.split('=')[1];
-        }
-      }
-
-      return null;
-    }
-  }
-
-  document.addEventListener("mouseenter", () => {
-    if (!CookieService.getCookie('exitIntentShown')) {
-      setTimeout(() => {
-        document.addEventListener('mouseout', mouseEvent);
-      }, 10_000);
-    }
-  }, {once: true});
-  const mouseEvent = e => {
-    const shouldShowExitIntent = 
-      !e.toElement && 
-      !e.relatedTarget &&
-      e.clientY < 10;
-
-    if (shouldShowExitIntent) {
-      document.removeEventListener('mouseout', mouseEvent);
-      document.querySelector('.closePopup').classList.remove('hidden');
-      CookieService.setCookie('exitIntentShown', true, 1);
-    }
-  };
-
-  $(".closePopup").click(function(e) {
-    if(
-      e.target.classList.contains("closePopup") || 
-      e.target.classList.contains("closePopup__close")
-    ){
-      $(".closePopup").addClass("hidden");
-    }
+  useLink1Dom.addEventListener("click", () => {
+    useLink1Dom.classList.toggle("active");
+    use1Dom.classList.toggle("hidden");
   });
-
-  $(".closePopup__block>.btn").click(function(e) {
-    $(".closePopup").addClass("hidden");
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $("#buy").offset().top
-    }, 2000);
-  });
-
-  // video
-  $(".--svg__rules_text3").click(function() {
-    $(".videoPopup").removeClass("hidden");
-  });
-
-  $(".videoPopup").click(function(e) {
-    if(
-      e.target.classList.contains("videoPopup") || 
-      e.target.classList.contains("videoPopup__close")
-    ){
-      $(".videoPopup").addClass("hidden");
-      $(".videoPopup video").get(0).pause();
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
   
+  useLink2Dom.addEventListener("click", () => {
+    useLink2Dom.classList.toggle("active");
+    use2Dom.classList.toggle("hidden");
+  });
 });

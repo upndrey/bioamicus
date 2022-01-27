@@ -1,10 +1,12 @@
 .header {
+    position: relative;
     &__wrapper {
+        position: relative;
         background: #FEFCFD;
         overflow: hidden;
         padding-top: 224px;
         padding-bottom: 115px;
-        
+
         @media (max-width: $bp__lg) {
             padding-top: 70px;
             padding-bottom: 75px;
@@ -79,6 +81,42 @@
 
     }
 
+    &__img {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 764px;
+            height: 763px;
+            z-index: 1;
+            @include image("header__img_bg.svg");
+        }
+
+        &>span {
+            position: absolute;
+            z-index: 2;
+            bottom: 40px;
+            right: 70px;
+            width: 192px;
+            font-size: 12px;
+            line-height: 130%;
+            color: rgba(0, 0, 0, 0.15);
+
+            @include fw(400);
+        }
+    }
+
     &__icons {
         width: 100%;
         display: flex;
@@ -125,7 +163,7 @@
                     margin-bottom: 25px;
                 }
             }
-            
+
             &:nth-child(1) {
                 .icon__container {
                     .icon {
@@ -176,6 +214,7 @@
                         @include image("header__family.svg");
                     }
                 }
+
                 span {
                     max-width: 216px;
                 }

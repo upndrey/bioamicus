@@ -1,6 +1,28 @@
 .help {
     position: relative;
 
+    &:before {
+        content: '';
+        position: absolute;
+        left: -250px;
+        top: 200px;
+        width: 368px;
+        height: 283px;
+        @include image("help__bg_left.png");
+        z-index: 3;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -400px;
+        top: 200px;
+        width: 606px;
+        height: 336px;
+        @include image("help__bg_right.png");
+        z-index: 3;
+    }
+
     &__wrapper {
         position: relative;
         overflow: hidden;
@@ -32,7 +54,7 @@
 
     h2 {
         position: relative;
-        z-index: 3;
+        z-index: 4;
 
         text-align: center;
         margin-bottom: 186px;
@@ -43,7 +65,7 @@
         width: 100%;
         margin: auto;
         position: relative;
-        z-index: 3;
+        z-index: 4;
 
         display: flex;
         justify-content: space-between;

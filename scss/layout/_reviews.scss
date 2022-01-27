@@ -8,7 +8,7 @@
         padding-top: 140px;
         padding-bottom: 138px;
         position: relative;
-        background: $buy__wrapper__bg;
+        background: #fff;
         overflow: hidden;
 
         @media (max-width: $bp__sm) {
@@ -23,7 +23,6 @@
             top: 265px;
             width: 435px;
             height: 536px;
-            // background-image: url("../images/reviews/left_vector.png");
         }
         
         &:after {
@@ -33,7 +32,6 @@
             top: 265px;
             width: 435px;
             height: 536px;
-            // background-image: url("../images/reviews/right_vector.png");
         }
     }
 
@@ -95,7 +93,7 @@
         border: 0;
         color: transparent;
         background-color: transparent;
-        background-image: url("../img/arrow_left.svg");
+        background-image: url("../images/arrow_left.svg");
         -webkit-background-size: cover;
         background-size: cover;
         cursor: pointer;
@@ -114,7 +112,7 @@
         border: 0;
         color: transparent;
         background-color: transparent;
-        background-image: url("../img/arrow_right.svg");
+        background-image: url("../images/arrow_right.svg");
         -webkit-background-size: cover;
         background-size: cover;
         cursor: pointer;

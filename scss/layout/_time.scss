@@ -1,59 +1,48 @@
 .time {
-    border-radius: 50px;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-	@media (max-width: $bp__lg) {
+    justify-content: space-between;
+
+    @media (max-width: $bp__lg) {
         flex-direction: column-reverse;
         justify-content: center;
-	}
+    }
+
     &__wrapper {
         position: relative;
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 108px;
+        padding-bottom: 130px;
+        background: #E8EBFF;
         overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: 0;
+            width: 586px;
+            height: 881px;
+            z-index: 1;
+
+            @include image("time__vector.svg");
+        }
 
         @media (max-width: $bp__sm) {
             padding-top: 50px;
         }
 
-        .vector1 {
-            position: absolute;
-            left: -350px;
-            bottom: -150px;
-            width: 438px;
-            height: 421px;
-            background-image: url("../img/time_vector_1.png");
-            z-index: 1;
-        }
-
-        .vector2 {
-            position: absolute;
-            right: -450px;
-            bottom: -20px;
-            width: 691px;
-            height: 612px;
-            background-image: url("../img/time_vector_2.png");
-            z-index: 1;
-        }
-
-        .vector3 {
-            position: absolute;
-            right: 100px;
-            bottom: -300px;
-            width: 634px;
-            height: 602px;
-            background-image: url("../img/time_vector_3.png");
-            z-index: 2;
-        }
     }
 
     .img {
+        position: absolute;
+        right: -100px;
+        top: -30px;
         width: 569px;
         max-width: 100%;
         height: 378px;
-        background: url("../img/time.jpg");
-        z-index: 100;
+        background: url("../images/time__img.png");
+        z-index: 2;
 
         @media (max-width: $bp__lg) {
             margin-bottom: 25px;
@@ -61,31 +50,35 @@
     }
 
     &__block {
-        width: 500px;
         max-width: 100%;
+
         @media (max-width: $bp__lg) {
             width: 100%;
         }
-        
+
         h2 {
             position: relative;
-            width: 700px;
+            width: 722px;
             max-width: 100%;
             text-align: left;
-            color: $secondary__color;
-            z-index: 100;
+            font-size: 56px;
+            line-height: 130%;
+            color: #242C6C;
+            z-index: 2;
+            margin-bottom: 10px;
         }
 
         p {
+            margin: 0;
             position: relative;
             width: 600px;
             max-width: 100%;
-            color: #2D2E2E;
+            color: #555557;
+            text-align: left;
             font-size: 17px;
             font-weight: 500;
             line-height: 150%;
-            margin-bottom: 50px;
-            z-index: 100;
+            z-index: 2;
         }
     }
 }

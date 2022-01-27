@@ -3,11 +3,26 @@
     justify-content: flex-end;
 
     &__wrapper {
+        position: relative;
         padding-top: 173px;
-        padding-bottom: 422px;
+        padding-bottom: 155px;
         background: #fff;
 
         @include image("lacto__bg.png", cover);
+
+        &:not(.lacto__wrapper_complete) {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 18px;
+                left: 0;
+                width: 162px;
+                height: 530px;
+                z-index: 1;
+
+                @include image("lacto__left.svg");
+            }
+        }
 
         &_complete {
             background: radial-gradient(48.37% 107.29% at 48.37% 37.44%, rgba(255, 198, 198, 0.2) 33.85%, rgba(242, 242, 250, 0.2) 100%), rgba(255, 245, 231, 0.65);
@@ -202,6 +217,10 @@
             text-decoration: underline;
             text-decoration-style: dashed;
             margin-right: 89px;
+
+            &.active {
+                color: rgba(47, 67, 105, 0.75);
+            }
         }
 
         .docs {
@@ -218,8 +237,121 @@
     }
 
     &__useBlock {
+        max-width: 642px;
+        min-width: 642px;
+        height: 239px;
+        width: 100%;
+        position: relative;
+        left: -100px;
+        opacity: 1;
+        display: flex;
+        justify-content: space-between;
+        background: #FFFFFF;
+        border: 0.7px solid #E5E5E5;
+        padding: 5px 42px 11px 42px;
+        box-sizing: border-box;
+        border-radius: 30px;
+
         &.hidden {
-            display: none;
+            opacity: 0;
+        }
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+            .icon {
+                width: 85px;
+                height: 85px;
+                margin-bottom: 4px;
+            }
+
+            .title {
+                font-size: 16px;
+                line-height: 130%;
+                color: #000000;
+                text-align: center;
+
+                @include fw(700);
+                margin: 0;
+                margin-bottom: 16px;
+            }
+
+            .drops {
+                margin-bottom: 11px;
+            }
+
+            .text {
+                border: 0.5px dashed #C4C4C4;
+                box-sizing: border-box;
+                border-radius: 30px;
+                font-size: 16px;
+                line-height: 130%;
+                color: #747E94;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 29px;
+                margin: 0;
+            }
+
+            &:nth-child(1) {
+                width: 157px;
+                .icon {
+                    @include image("lacto__kid1.svg");
+                    margin-bottom: 6px;
+                }
+
+                .drops {
+                    width: 155px;
+                    height: 33px;
+                    @include image("lacto__drops1.svg");
+                }
+                .text {
+                    width: 157px;
+                }
+            }
+
+            &:nth-child(2) {
+                width: 184px;
+                .icon {
+                    @include image("lacto__kid2.png");
+                }
+
+                .drops {
+                    width: 155px;
+                    height: 33px;
+                    @include image("lacto__drops2.svg");
+                }
+
+                .text {
+                    width: 184px;
+                }
+            }
+
+            &:nth-child(3) {
+                width: 184px;
+                .icon {
+                    @include image("lacto__kid3.png");
+                }
+
+                .title {
+                    margin-bottom: 10px;
+                }
+
+                .drops {
+                    width: 162px;
+                    height: 61px;
+                    @include image("lacto__drops3.svg");
+                }
+                
+                .text {
+                    width: 184px;
+                }
+            }
         }
     }
 }
