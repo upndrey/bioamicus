@@ -24,7 +24,7 @@ $(document).ready(function(e) {
   }
 
   //links
-  let currentActiveLink = null;
+  let currentActiveLink = ".bioLink";
   $(".bioLink").click(function(e) {
     e.preventDefault();
     if(currentActiveLink && currentActiveLink !== ".bioLink")

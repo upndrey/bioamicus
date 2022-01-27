@@ -71,6 +71,9 @@
                 font-size: 14px;
                 line-height: 22px; 
                 @include fw(400);
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 @media (max-width: $bp__xl) {
                     margin: 0 10px;
@@ -79,6 +82,31 @@
                 &:hover {
                     @include fw(700);
                     color: #B56D0B;
+                }
+
+                &>.active {
+                    @include fw(700);
+                    color: #B56D0B;
+                }
+
+                &:nth-child(1) {
+                    width: 82px;
+                }
+
+                &:nth-child(2) {
+                    width: 186px;
+                }
+
+                &:nth-child(3) {
+                    width: 55px;
+                }
+
+                &:nth-child(4) {
+                    width: 62px;
+                }
+
+                &:nth-child(5) {
+                    width: 66px;
                 }
             }
         }
