@@ -25,19 +25,34 @@ $(document).ready(function(e) {
 
   //links
   let currentActiveLink = null;
-  $(".dobbleLink").click(function(e) {
+  $(".bioLink").click(function(e) {
     e.preventDefault();
-    if(currentActiveLink && currentActiveLink !== ".dobbleLink")
+    if(currentActiveLink && currentActiveLink !== ".bioLink")
       document.querySelectorAll(currentActiveLink).forEach((elem) => {
         elem.classList.remove("active");
       });
-    currentActiveLink = ".dobbleLink";
-    $(".dobbleLink").addClass("active");
+    currentActiveLink = ".bioLink";
+    $(".bioLink").addClass("active");
 
     $([document.documentElement, document.body]).animate({
-      scrollTop: $("#dobble").offset().top
+      scrollTop: $("#bio").offset().top
     }, 2000);
   });
+
+  $(".needLink").click(function(e) {
+    e.preventDefault();
+    if(currentActiveLink && currentActiveLink !== ".needLink")
+      document.querySelectorAll(currentActiveLink).forEach((elem) => {
+        elem.classList.remove("active");
+      });
+    currentActiveLink = ".needLink";
+    $(".needLink").addClass("active");
+
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#need").offset().top - 100
+    }, 2000);
+  });
+
   $(".buyLink").click(function(e) {
     e.preventDefault();
     if(currentActiveLink && currentActiveLink !== ".buyLink")
@@ -48,49 +63,7 @@ $(document).ready(function(e) {
     $(".buyLink").addClass("active");
 
     $([document.documentElement, document.body]).animate({
-      scrollTop: $("#buy").offset().top - 100
-    }, 2000);
-  });
-
-  $(".rulesLink").click(function(e) {
-    e.preventDefault();
-    if(currentActiveLink && currentActiveLink !== ".rulesLink")
-      document.querySelectorAll(currentActiveLink).forEach((elem) => {
-        elem.classList.remove("active");
-      });
-    currentActiveLink = ".rulesLink";
-    $(".rulesLink").addClass("active");
-
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $("#rules").offset().top
-    }, 2000);
-  });
-
-  $(".featuresLink").click(function(e) {
-    e.preventDefault();
-    if(currentActiveLink && currentActiveLink !== ".featuresLink")
-      document.querySelectorAll(currentActiveLink).forEach((elem) => {
-        elem.classList.remove("active");
-      });
-    currentActiveLink = ".featuresLink";
-    $(".featuresLink").addClass("active");
-
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $("#features").offset().top
-    }, 2000);
-  });
-
-  $(".benefitsLink").click(function(e) {
-    e.preventDefault();
-    if(currentActiveLink && currentActiveLink !== ".benefitsLink")
-      document.querySelectorAll(currentActiveLink).forEach((elem) => {
-        elem.classList.remove("active");
-      });
-    currentActiveLink = ".benefitsLink";
-    $(".benefitsLink").addClass("active");
-
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $("#benefits").offset().top
+      scrollTop: $("#shop").offset().top - 100
     }, 2000);
   });
 
