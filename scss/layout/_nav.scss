@@ -6,11 +6,12 @@
         position: fixed;
         width: 100%;
         background: #FEFCFD;
-        padding: 42px 0;
+        padding: 20px 0;
         box-sizing: border-box;
-        z-index: 100;
+        z-index: 10000;
 
         .mobileNav__wrapper {
+            color: #232323;
             display: block;
             &.hidden {
                 display: none;
@@ -20,8 +21,11 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                margin: 0;
+                padding: 0;
 
                 li {
+                    list-style: none;
                     font-size: 18px;
                     margin-bottom: 15px;
                 }
@@ -46,6 +50,9 @@
             letter-spacing: 0.03em;
             color: #0A1046;
             font-weight: 500;
+            @media (max-width: $bp__xs) {
+                display: none;
+            }
         }
     }
     nav {
@@ -89,6 +96,7 @@
             cursor: pointer;
             transition: .4s;
             z-index: 1002;
+            margin-left: 20px;
             &__icon {
                 display: block;
                 position: relative;
@@ -142,11 +150,13 @@
         }
     }
 
-    .btn-buy {
-	    margin-left: 40px;
-        @media (max-width: $bp__xl) {
-            margin-left: 0px;
-            margin-right: 20px;
+    .btn_buy {
+        transition: .5s;
+        border: 1px solid transparent;
+        &:hover {
+            color: #313131;
+            border: 1px solid #313131;
+            background: #fff;
         }
     }
 }

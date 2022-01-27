@@ -2,7 +2,15 @@
     display: flex;
     justify-content: flex-end;
 
+    @media (max-width: $bp__lg) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (max-width: $bp__sm) {
+        justify-content: flex-start;
+    }
     &__wrapper {
+        overflow: hidden;
         position: relative;
         padding-top: 173px;
         padding-bottom: 155px;
@@ -29,6 +37,43 @@
         }
     }
 
+    &_complete {
+        
+        @media (max-width: $bp__lg) {
+            flex-direction: column-reverse;
+        }
+        .buy__useBlock {
+            @media (max-width: $bp__xl) {
+                left: 0px;
+            }
+        }
+        .lacto__image {
+            .enough {
+                @include image("lacto__enough_c.svg");
+                right: auto;
+                left: 50px;
+                @media (max-width: $bp__xl) {
+                    left: -20px;
+                }
+                @media (max-width: $bp__sm) {
+                    left: 60px;
+                }
+                &>p {
+                    margin-left: 0px;
+                    margin-right: 40px;
+                    &:nth-child(1) {
+                        margin-left: 0px;
+                        margin-right: 60px;
+                    }
+    
+                    &:nth-child(3) {
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+
     &__image {
         width: 449px;
         height: 482px;
@@ -39,6 +84,9 @@
         position: relative;
         margin-right: 81px;
 
+        @media (max-width: $bp__lg) {
+            margin-right: 0;
+        }
         &:before {
             content: '';
             width: 449px;
@@ -85,6 +133,12 @@
             justify-content: center;
 
             @include image("lacto__enough.svg");
+            @media (max-width: $bp__xl) {
+                right: -20px;
+            }
+            @media (max-width: $bp__sm) {
+                right: 60px;
+            }
 
             &>p {
                 margin: 0;
@@ -130,11 +184,19 @@
     top: 50px;
     max-width: 616px;
 
+    @media (max-width: $bp__md) {
+        max-width: 100%;
+    }
     h2 {
         font-size: 42px;
         line-height: 130%;
         color: #DC0D17;
         margin-bottom: 18px;
+        @media (max-width: $bp__sm) {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
     }
 
     h2+p {
@@ -151,6 +213,9 @@
         display: flex;
         margin-bottom: 20px;
 
+        @media (max-width: $bp__sm) {
+            flex-direction: column;
+        }
         .wildberries {
             width: 212px;
             height: 50px;
@@ -163,7 +228,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+            transition: .5s;
+            &:hover {
+                border: 0.6px solid #bb12a0;
+            }
 
+            @media (max-width: $bp__sm) {
+                margin-right: 0px;
+                margin-bottom: 10px;
+                width: 100%;
+            }
             &:before {
                 content: '';
                 position: relative;
@@ -186,7 +261,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
+            cursor: pointer;
+            transition: .5s;
+            &:hover {
+                border: 0.6px solid #064bf3;
+            }
+            @media (max-width: $bp__sm) {
+                width: 100%;
+            }
             &:before {
                 content: '';
                 position: relative;
@@ -203,6 +285,9 @@
         display: flex;
 
 
+        @media (max-width: $bp__sm) {
+            flex-direction: column-reverse;
+        }
         .use {
             cursor: pointer;
             font-size: 14px;
@@ -221,6 +306,11 @@
             &.active {
                 color: rgba(47, 67, 105, 0.75);
             }
+            @media (max-width: $bp__sm) {
+                text-align: center;
+                margin: auto;
+                margin-bottom: 10px;
+            }
         }
 
         .docs {
@@ -233,10 +323,16 @@
             @include fw(400);
             text-decoration: underline;
             text-decoration-style: dashed;
+            @media (max-width: $bp__sm) {
+                margin: 0;
+                text-align: center;
+                margin-bottom: 5px;
+            }
         }
     }
 
     &__useBlock {
+        z-index: 3;
         max-width: 642px;
         min-width: 642px;
         height: 239px;
@@ -252,6 +348,22 @@
         box-sizing: border-box;
         border-radius: 30px;
 
+        @media (max-width: $bp__lg) {
+            left: 0px;
+        }
+        @media (max-width: $bp__md) {
+            min-width: fit-content;
+            max-width: fit-content;
+            height: fit-content;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            &.hidden {
+                opacity: 0;
+                display: none;
+            }
+        }
         &.hidden {
             opacity: 0;
         }
@@ -262,6 +374,11 @@
             align-items: center;
             justify-content: center;
 
+            @media (max-width: $bp__md) {
+                &:not(:first-child) {
+                    margin-bottom: 20px;
+                }
+            }
 
             .icon {
                 width: 85px;

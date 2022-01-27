@@ -14,6 +14,8 @@
             margin-bottom: 43px;
             display: flex;
 
+            
+
             @media (max-width: $bp__lg) {
                 flex-direction: column;
                 justify-content: center;
@@ -43,9 +45,13 @@
                     letter-spacing: 0.03em;
                     color: #fff;
                     font-weight: 500;
+                    @media (max-width: $bp__xs) {
+                        display: block;
+                    }
                 }
             }
             &__list {
+                padding: 0;
                 display: flex;
                 color: #fff;
                 text-transform: none;
@@ -68,14 +74,22 @@
                         text-decoration: underline;
                     }
 
+                    @media (max-width: $bp__xl) {
+                        margin: 0 10px;
+                    }
                     @media (max-width: $bp__lg) {
                         margin-bottom: 10px;
                     }
                 }
             }
 
-            .btn {
-
+            .btn_buy {
+                background: transparent;
+                border: 1px solid #fff;
+                
+                &:hover {
+                    background: #fff;
+                }
                 @media (max-width: $bp__lg) {
                     margin-right: 0;
                 }

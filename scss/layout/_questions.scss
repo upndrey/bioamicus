@@ -24,7 +24,11 @@
             padding-bottom: 60px;
         }
 
-        h2 {}
+        h2 {
+            @media (max-width: $bp__sm) {
+                text-align: center;
+            }
+        }
 
         p {
             margin-bottom: 27px;

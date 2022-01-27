@@ -23,7 +23,16 @@
 
     &__block {
         position: relative;
+        z-index: 4;
 
+        @media (max-width: $bp__md) {
+            width: 100%;
+            margin-top: 430px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
         h1 {
             max-width: 743px;
@@ -34,14 +43,17 @@
             position: relative;
             margin-bottom: 20px;
 
+            @media (max-width: $bp__md) {
+                max-width: 100%;
+                font-size: 40px;
+                text-align: center;
+                margin: 0;
+            }
+
             @media (max-width: $bp__sm) {
                 text-align: center;
                 font-size: 36px;
                 margin-bottom: 10px;
-            }
-
-            @media (max-width: $bp__sm) {
-                font-size: 24px;
             }
         }
 
@@ -52,6 +64,10 @@
             margin-bottom: 42px;
             position: relative;
 
+            @media (max-width: $bp__md) {
+                margin: 0;
+                margin-bottom: 20px;
+            }
             @media (max-width: $bp__sm) {
                 text-align: center;
                 margin-bottom: 15px;
@@ -72,11 +88,20 @@
             line-height: 55px;
             text-align: center;
             color: #FFFFFF;
-            transition: .5s ease-in-out;
+            transition: .5s;
             margin-bottom: 181px;
+            border: 1px solid transparent;
+            cursor: pointer;
 
-            &:hover {}
+            &:hover {
+                color: #CF2F47;
+                border: 1px solid #CF2F47;
+                background: #fff;
+            }
 
+            @media (max-width: $bp__md) {
+                margin-bottom: 60px;
+            }
         }
 
     }
@@ -88,6 +113,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 3;
+
+        @media (max-width: $bp__xl) {
+            right: -250px;
+        }
+        @media (max-width: $bp__lg) {
+            right: -150px;
+            opacity: .6;
+        }
+
+        
+        @media (max-width: $bp__md) {
+            right: 0;
+            left: 0;
+            margin: auto;
+            top: -380px;
+        }
 
         img {
             position: relative;

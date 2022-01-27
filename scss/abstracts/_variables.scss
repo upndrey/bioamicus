@@ -56,13 +56,13 @@ $width__xxl: 1250px;
 $width__xl: 991px;
 $width__lg: 767px;
 $width__md: 575px;
-$width__sm: 424px;
-$width__xs: 100%;
+$width__sm: calc(100% - 20px);
+$width__xs: calc(100% - 20px);
 
 //breakpoins
 $bp__xl: 1271px;
-$bp__lg: 992px;
-$bp__md: 768px;
+$bp__lg: 1009px;
+$bp__md: 787px;
 $bp__sm: 576px;
 $bp__xs: 425px;
 

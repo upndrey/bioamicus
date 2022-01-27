@@ -18,8 +18,9 @@ h1 {
 }
 
 h2 {
+  margin: 0;
   font-size: 42px;
-  line-height: 16px;
+  line-height: 130%;
   color: #242C6C;
 
   @include fw(700);
@@ -36,6 +37,7 @@ h2+p {
   align-items: center;
   text-align: center;
   color: #A0712D;
+  margin: 0;
 
   @include fw(300);
 

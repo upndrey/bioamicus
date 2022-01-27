@@ -2,6 +2,7 @@
     position: relative;
 
     &__wrapper {
+        overflow: hidden;
         padding-top: 125px;
         padding-bottom: 157px;
         background: #eaeaf5;
@@ -59,6 +60,9 @@
         text-align: center;
         margin-bottom: 20px;
 
+        @media (max-width: $bp__sm) {
+            margin-bottom: 10px;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -101,8 +105,8 @@
 
     &__table {
         position: relative;
+        top:10px;
         width: 1037px;
-        overflow-x: auto;
         overflow-y: hidden;
         margin: auto;
         border-radius: 15px;
@@ -110,6 +114,11 @@
         flex-direction: column;
 
         &_wrapper {
+            width: 100%;
+            max-width: 1037px;
+
+            height: 535px;
+            margin: auto;
             position: relative;
             &:after {
                 content: '';
@@ -119,9 +128,13 @@
                 box-sizing: border-box;
                 border-radius: 20px;
                 position: absolute;
-                top: -10px;
-                left: 564px;
+                top: 0px;
+                left: 457px;
                 z-index: 4;
+            }
+            @media (max-width: $bp__lg) {
+                overflow: scroll;
+                overflow-y: hidden;
             }
         }
 
