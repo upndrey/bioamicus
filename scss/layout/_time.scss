@@ -12,7 +12,7 @@
     &__wrapper {
         position: relative;
         padding-top: 108px;
-        padding-bottom: 130px;
+        padding-bottom: 160px;
         background: #E8EBFF;
         overflow: hidden;
 
@@ -43,6 +43,7 @@
         height: 378px;
         background: url("../images/time__img.png");
         z-index: 2;
+
         @media (max-width: $bp__xl) {
             opacity: .7;
         }
@@ -51,6 +52,7 @@
             top: -60px;
             opacity: .4;
         }
+
         @media (max-width: $bp__sm) {
             text-align: center;
             left: 0;
@@ -79,6 +81,7 @@
             color: #242C6C;
             z-index: 2;
             margin-bottom: 10px;
+
             @media (max-width: $bp__sm) {
                 text-align: center;
                 font-size: 24px;
