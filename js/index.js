@@ -33,6 +33,8 @@ $(document).ready(function(e) {
       });
     currentActiveLink = ".bioLink";
     $(".bioLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav nav .burger").removeClass("active");
 
     $([document.documentElement, document.body]).animate({
       scrollTop: $("#bio").offset().top
@@ -47,6 +49,8 @@ $(document).ready(function(e) {
       });
     currentActiveLink = ".needLink";
     $(".needLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav nav .burger").removeClass("active");
 
     $([document.documentElement, document.body]).animate({
       scrollTop: $("#need").offset().top - 100
@@ -61,6 +65,8 @@ $(document).ready(function(e) {
       });
     currentActiveLink = ".buyLink";
     $(".buyLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav nav .burger").removeClass("active");
 
     $([document.documentElement, document.body]).animate({
       scrollTop: $("#shop").offset().top - 100
@@ -75,6 +81,8 @@ $(document).ready(function(e) {
       });
     currentActiveLink = ".reviewsLink";
     $(".reviewsLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav nav .burger").removeClass("active");
 
     $([document.documentElement, document.body]).animate({
       scrollTop: $("#reviews").offset().top
@@ -89,6 +97,8 @@ $(document).ready(function(e) {
       });
     currentActiveLink = ".questionsLink";
     $(".questionsLink").addClass("active");
+    $(".mobileNav__wrapper").addClass("hidden");
+    $(".nav nav .burger").removeClass("active");
 
     $([document.documentElement, document.body]).animate({
       scrollTop: $("#questions").offset().top - 100
