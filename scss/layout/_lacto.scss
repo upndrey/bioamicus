@@ -295,6 +295,10 @@
         @media (max-width: $bp__sm) {
             flex-direction: column-reverse;
         }
+
+        &>p {
+            margin: 0;
+        }
         .use {
             cursor: pointer;
             font-size: 14px;
