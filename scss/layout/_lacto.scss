@@ -71,6 +71,11 @@
                     }
                 }
             }
+
+            img {
+                max-width: 212px;
+                max-height: 321px;
+            }
         }
     }
 
@@ -117,6 +122,8 @@
         img {
             position: relative;
             z-index: 3;
+            max-width: 215px;
+            max-height: 326px;
         }
 
         .enough {
