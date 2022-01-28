@@ -291,6 +291,11 @@
     &__links {
         display: flex;
 
+        @media (max-width: $bp__md) {
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
 
         @media (max-width: $bp__sm) {
             flex-direction: column-reverse;
@@ -300,6 +305,7 @@
             margin: 0;
         }
         .use {
+            position: relative;
             cursor: pointer;
             font-size: 14px;
             line-height: 130%;
@@ -313,9 +319,24 @@
             text-decoration: underline;
             text-decoration-style: dashed;
             margin-right: 89px;
+            margin-left: 20px;
 
             &.active {
                 color: rgba(47, 67, 105, 0.75);
+            }
+
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -20px;
+                width: 14px;
+                height: 14px;
+                
+                @include image("buy__use.svg");
+            }
+            @media (max-width: $bp__md) {
+                margin-left: 0;
             }
             @media (max-width: $bp__sm) {
                 text-align: center;
@@ -325,6 +346,8 @@
         }
 
         .docs {
+            width: fit-content;
+            position: relative;
             cursor: pointer;
             font-size: 12px;
             line-height: 150%;
@@ -334,9 +357,20 @@
             @include fw(400);
             text-decoration: underline;
             text-decoration-style: dashed;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -25px;
+                width: 16px;
+                height: 20px;
+                
+                @include image("buy__instr.svg");
+            }
             @media (max-width: $bp__sm) {
                 margin: 0;
                 text-align: center;
+                margin: auto;
                 margin-bottom: 5px;
             }
         }
