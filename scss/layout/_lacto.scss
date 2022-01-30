@@ -92,6 +92,9 @@
         @media (max-width: $bp__lg) {
             margin-right: 0;
         }
+        @media (max-width: $bp__md) {
+            height: 250px;
+        }
         &:before {
             content: '';
             width: 449px;
@@ -124,6 +127,9 @@
             z-index: 3;
             max-width: 215px;
             max-height: 326px;
+            @media (max-width: $bp__sm) {
+                max-width: 174px;
+            }
         }
 
         .enough {
@@ -145,6 +151,7 @@
             }
             @media (max-width: $bp__sm) {
                 right: 60px;
+                top: 72px;
             }
 
             &>p {
@@ -192,6 +199,9 @@
     max-width: 616px;
 
     @media (max-width: $bp__md) {
+        z-index: 5;
+    }
+    @media (max-width: $bp__md) {
         max-width: 100%;
     }
     h2 {
@@ -201,7 +211,6 @@
         margin-bottom: 18px;
         @media (max-width: $bp__sm) {
             font-size: 24px;
-            text-align: center;
             margin-bottom: 10px;
         }
     }

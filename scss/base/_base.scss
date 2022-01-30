@@ -55,8 +55,12 @@ ul {
 body>.vector {
   position: relative;
   width: 100%;
+  max-width: 100%;
   height: 0;
   margin: auto;
+  @media (max-width: $bp__sm) {
+    display: none;
+  }
   .vector__line {
     position: absolute;
     top: -44px;

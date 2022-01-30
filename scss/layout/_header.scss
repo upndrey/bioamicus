@@ -25,7 +25,7 @@
         position: relative;
         z-index: 4;
 
-        @media (max-width: $bp__md) {
+        @media (max-width: $bp__lg) {
             width: 100%;
             margin-top: 430px;
             display: flex;
@@ -34,6 +34,9 @@
             justify-content: center;
         }
 
+        @media (max-width: $bp__md) {
+            margin-top: 30px;
+        }
         h1 {
             max-width: 743px;
             font-size: 50px;
@@ -42,17 +45,18 @@
             color: #242C6C;
             position: relative;
             margin-bottom: 20px;
-
+            font-family: sans-serif;
             @media (max-width: $bp__md) {
                 max-width: 100%;
-                font-size: 40px;
-                text-align: center;
+                font-size: 36px;
+                line-height: normal;
+                text-align: left;
                 margin: 0;
+                text-transform: none;
             }
 
             @media (max-width: $bp__sm) {
-                text-align: center;
-                font-size: 36px;
+                font-size: 32px;
                 margin-bottom: 10px;
             }
         }
@@ -69,7 +73,7 @@
                 margin-bottom: 20px;
             }
             @media (max-width: $bp__sm) {
-                text-align: center;
+                text-align: left;
                 margin-bottom: 15px;
             }
         }
@@ -118,17 +122,16 @@
         @media (max-width: $bp__xl) {
             right: -250px;
         }
-        @media (max-width: $bp__lg) {
-            right: -150px;
-            opacity: .6;
-        }
 
-        
-        @media (max-width: $bp__md) {
+        @media (max-width: $bp__lg) {
             right: 0;
             left: 0;
             margin: auto;
-            top: -380px;
+            top: -430px;
+        }
+        @media (max-width: $bp__md) {
+            top: 25px;
+            position: relative;
         }
 
         img {
@@ -136,6 +139,10 @@
             max-height: 496px;
             position: relative;
             z-index: 2;
+            @media (max-width: $bp__md) {
+                max-width: 100%;
+                max-height: auto;
+            }
         }
 
         &:before {
@@ -158,6 +165,10 @@
             color: rgba(0, 0, 0, 0.15);
 
             @include fw(400);
+            @media (max-width: $bp__sm) {
+                right: 20px;
+            }
+    
         }
     }
 
