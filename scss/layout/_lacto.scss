@@ -29,6 +29,9 @@
                 z-index: 1;
 
                 @include image("lacto__left.svg");
+                @media (max-width: $bp__sm) {
+                    display: none;
+                }
             }
         }
 
