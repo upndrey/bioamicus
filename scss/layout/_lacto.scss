@@ -416,10 +416,11 @@
             min-width: fit-content;
             max-width: fit-content;
             height: fit-content;
-            flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            flex-wrap: wrap;
             margin: auto;
+            padding: 5px;
             &.hidden {
                 opacity: 0;
                 display: none;
@@ -436,15 +437,22 @@
             justify-content: center;
 
             @media (max-width: $bp__md) {
+                margin: 0 10px;
                 &:not(:first-child) {
                     margin-bottom: 20px;
                 }
+            }
+            @media (max-width: $bp__sm) {
+                margin: 0 4px;
             }
 
             .icon {
                 width: 85px;
                 height: 85px;
                 margin-bottom: 4px;
+                @media (max-width: $bp__md) {
+                    margin-bottom: 7px;
+                }
             }
 
             .title {
