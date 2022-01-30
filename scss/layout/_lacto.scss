@@ -78,6 +78,9 @@
             img {
                 max-width: 212px;
                 max-height: 321px;
+                @media (max-width: $bp__sm) {
+                    max-width: 175px;
+                }
             }
         }
     }
