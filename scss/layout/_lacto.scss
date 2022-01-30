@@ -426,6 +426,9 @@
                 display: none;
             }
         }
+        @media (max-width: $bp__sm) {
+            padding: 5px 0;
+        }
         &.hidden {
             opacity: 0;
         }
@@ -451,7 +454,7 @@
                 height: 85px;
                 margin-bottom: 4px;
                 @media (max-width: $bp__md) {
-                    margin-bottom: 7px;
+                    margin-bottom: 6px;
                 }
             }
 
