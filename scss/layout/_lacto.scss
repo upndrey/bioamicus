@@ -446,7 +446,10 @@
                 }
             }
             @media (max-width: $bp__sm) {
-                margin: 0 4px;
+                margin: 0 1px;
+                &:not(:first-child) {
+                    margin-bottom: 20px;
+                }
             }
 
             .icon {
