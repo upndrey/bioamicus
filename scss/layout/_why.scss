@@ -1,6 +1,13 @@
 .why {
     position: relative;
 
+    @media (max-width: $bp__sm) {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 5px !important;
+        padding-right: 0 !important;
+    }
     &__wrapper {
         overflow: hidden;
         padding-top: 125px;
@@ -152,7 +159,7 @@
         border-radius: 15px;
         display: flex;
         flex-direction: column;
-
+        
         &_wrapper {
             width: 100%;
             max-width: 1037px;
