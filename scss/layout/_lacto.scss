@@ -56,10 +56,9 @@
                 right: auto;
                 left: 50px;
                 @media (max-width: $bp__xl) {
-                    left: -20px;
                 }
                 @media (max-width: $bp__sm) {
-                    left: 60px;
+                    left: 70px;
                 }
                 &>p {
                     margin-left: 0px;
@@ -97,6 +96,7 @@
 
         @media (max-width: $bp__lg) {
             margin-right: 0;
+            height: 250px;
         }
         @media (max-width: $bp__md) {
             height: 250px;
@@ -110,10 +110,13 @@
             z-index: 1;
 
             @include image("lacto__img_bg.svg");
+            @media (max-width: $bp__lg) {
+                top: -100px;
+            }
         }
 
         &:after {
-            content: 'Биологически активная добавка к пище. Не является лекарством';
+            content: 'Биологически активная добавка к пище. Не является лекарством.';
             position: relative;
             bottom: 10px;
             display: block;
@@ -152,12 +155,11 @@
             justify-content: center;
 
             @include image("lacto__enough.svg");
-            @media (max-width: $bp__xl) {
-                right: -20px;
+            @media (max-width: $bp__lg) {
+                top: -11px;
             }
             @media (max-width: $bp__sm) {
-                right: 60px;
-                top: 72px;
+                right: 70px;
             }
 
             &>p {
@@ -204,7 +206,7 @@
     top: 50px;
     max-width: 616px;
 
-    @media (max-width: $bp__md) {
+    @media (max-width: $bp__lg) {
         z-index: 5;
     }
     @media (max-width: $bp__md) {
@@ -235,9 +237,6 @@
         display: flex;
         margin-bottom: 20px;
 
-        @media (max-width: $bp__sm) {
-            flex-direction: column;
-        }
         .wildberries {
             width: 212px;
             height: 50px;
@@ -257,8 +256,9 @@
             }
 
             @media (max-width: $bp__sm) {
-                margin-right: 0px;
-                margin-bottom: 10px;
+                margin-right: 10px;
+                margin-bottom: 0px;
+                height: 40px;
                 width: 100%;
             }
             &:before {
@@ -290,6 +290,7 @@
             }
             @media (max-width: $bp__sm) {
                 width: 100%;
+                height: 40px;
             }
             &:before {
                 content: '';

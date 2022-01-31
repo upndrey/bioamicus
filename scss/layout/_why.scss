@@ -6,6 +6,10 @@
         padding-top: 125px;
         padding-bottom: 157px;
         background: #eaeaf5;
+        @media (max-width: $bp__sm) {
+            padding-top: 75px;
+            padding-bottom: 75px;
+        }
     }
 
 
@@ -153,7 +157,7 @@
             width: 100%;
             max-width: 1037px;
 
-            height: 535px;
+            height: 555px;
             margin: auto;
             position: relative;
 
@@ -161,7 +165,7 @@
             &:after {
                 content: '';
                 width: 363px;
-                height: 517px;
+                height: 537px;
                 border: 2.6px dashed #C6A577;
                 box-sizing: border-box;
                 border-radius: 20px;
@@ -202,6 +206,7 @@
         .td {
             background: #fff;
 
+            font-family: sans-serif !important;
             &:nth-child(1) {
                 align-items: center;
                 font-size: 16px;
@@ -268,6 +273,7 @@
             line-height: 120%;
             color: #232323;
 
+            font-family: sans-serif !important;
             @include fw(700);
 
             &:nth-child(3) {

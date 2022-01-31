@@ -7,6 +7,9 @@
         padding-top: 125px;
         padding-bottom: 50px;
 
+        @media (max-width: $bp__sm) {
+            padding-top: 75px;
+        }
         &>.container {
             position: relative;
             .blur {
@@ -244,6 +247,7 @@
                 @include image("need__kid_bg.svg");
                 @media (max-width: $bp__sm) {
                     opacity: .8;
+                    top: 20px;
                 }
             }
 

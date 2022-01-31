@@ -39,6 +39,9 @@
         @media (max-width: $bp__lg) {
             padding-bottom:140px;
         }
+        @media (max-width: $bp__sm) {
+            padding-bottom: 75px;
+        }
 
         &:after {
             content: '';
