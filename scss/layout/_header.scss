@@ -259,7 +259,7 @@
                     .icon {
                         width: 33px;
                         height: 33px;
-                        @include image("header__list.svg");
+                        @include image("header__list.png");
                     }
                 }
 
@@ -271,8 +271,8 @@
             &:nth-child(3) {
                 .icon__container {
                     .icon {
-                        width: 30px;
-                        height: 30px;
+                        width: 38px;
+                        height: 38px;
                         @include image("header__green.svg");
                     }
                 }
