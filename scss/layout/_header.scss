@@ -47,6 +47,9 @@
             position: relative;
             margin-bottom: 20px;
             font-family: sans-serif;
+            @media (max-width: $bp__lg) {
+                max-width: 100%;
+            }
             @media (max-width: $bp__md) {
                 max-width: 100%;
                 font-size: 36px;
@@ -68,6 +71,10 @@
             color: #A0712D;
             margin-bottom: 42px;
             position: relative;
+            max-width: 603px;
+            @media (max-width: $bp__lg) {
+                max-width: 100%;
+            }
 
             @media (max-width: $bp__md) {
                 margin: 0;
