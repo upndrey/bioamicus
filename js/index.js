@@ -56,22 +56,41 @@ $(document).ready(function(e) {
       scrollTop: $("#need").offset().top - 100
     }, 2000);
   });
+  
+  if ($(window).width() < 787) {
+    $(".buyLink").click(function(e) {
+      e.preventDefault();
+      if(currentActiveLink && currentActiveLink !== ".buyLink")
+        document.querySelectorAll(currentActiveLink).forEach((elem) => {
+          elem.classList.remove("active");
+        });
+      currentActiveLink = ".buyLink";
+      $(".buyLink").addClass("active");
+      $(".mobileNav__wrapper").addClass("hidden");
+      $(".nav nav .burger").removeClass("active");
 
-  $(".buyLink").click(function(e) {
-    e.preventDefault();
-    if(currentActiveLink && currentActiveLink !== ".buyLink")
-      document.querySelectorAll(currentActiveLink).forEach((elem) => {
-        elem.classList.remove("active");
-      });
-    currentActiveLink = ".buyLink";
-    $(".buyLink").addClass("active");
-    $(".mobileNav__wrapper").addClass("hidden");
-    $(".nav nav .burger").removeClass("active");
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#shop").offset().top - 100
+      }, 2000);
+    });
+  }
+  else {
+    $(".buyLink").click(function(e) {
+      e.preventDefault();
+      if(currentActiveLink && currentActiveLink !== ".buyLink")
+        document.querySelectorAll(currentActiveLink).forEach((elem) => {
+          elem.classList.remove("active");
+        });
+      currentActiveLink = ".buyLink";
+      $(".buyLink").addClass("active");
+      $(".mobileNav__wrapper").addClass("hidden");
+      $(".nav nav .burger").removeClass("active");
 
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $("#shop").offset().top - 100
-    }, 2000);
-  });
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#shop2").offset().top - 100
+      }, 2000);
+    });
+  }
 
   $(".reviewsLink").click(function(e) {
     e.preventDefault();
