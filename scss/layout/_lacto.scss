@@ -51,6 +51,15 @@
             }
         }
         .lacto__image {
+            &:after {
+                bottom: 50px;
+                @media (max-width: $bp__lg) {
+                    bottom: 50px;
+                }
+                @media (max-width: $bp__sm) {
+                    bottom: 40px;
+                }
+            }
             .enough {
                 @include image("lacto__enough_c.svg");
                 right: auto;
@@ -75,10 +84,11 @@
             }
 
             img {
-                max-width: 212px;
-                max-height: 321px;
+                max-width: 420px;
+                max-height: 420px;
                 @media (max-width: $bp__sm) {
-                    max-width: 175px;
+                    max-width: 340px;
+                    max-height: 340px;
                 }
             }
         }
@@ -118,7 +128,7 @@
         &:after {
             content: 'Биологически активная добавка к пище. Не является лекарством.';
             position: relative;
-            bottom: 10px;
+            bottom: 30px;
             display: block;
             width: 192px;
             height: 32px;
@@ -129,15 +139,22 @@
             color: rgba(0, 0, 0, 0.5);
 
             @include fw(400);
+            @media (max-width: $bp__lg) {
+                bottom: 35px;
+            }
+            @media (max-width: $bp__sm) {
+                bottom: 25px;
+            }
         }
 
         img {
             position: relative;
             z-index: 3;
-            max-width: 215px;
-            max-height: 326px;
+            max-width: 387px;
+            max-height: 387px;
             @media (max-width: $bp__sm) {
-                max-width: 174px;
+                max-width: 305px;
+                max-height: 305px;
             }
         }
 
